@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { FiArrowDown, FiArrowUp, FiPlayCircle } from "react-icons/fi";
 
 const HeaderTicker = () => {
   return (
@@ -7,7 +8,9 @@ const HeaderTicker = () => {
       <div className="htPlay">
         <a href="">
           <span>Watch Now</span>
-          <img src="https://www.sonyliv.com/slicms/shortlink/2021/05/1620150343_Web_16x9_PlayIcon.png" alt="Play" />
+          <b>
+            <FiPlayCircle />
+          </b>
         </a>
       </div>
 
@@ -29,11 +32,11 @@ const HeaderTicker = () => {
       <div className="htStocks">
         <img src="" alt="" />
         <span className="htStock hts-success">
-          <i></i>
+          <FiArrowUp />
           <span>NSE: 2926.85 (0.28 %)</span>
         </span>
         <span className="htStock hts-danger">
-          <i></i>
+          <FiArrowDown />
           <span>BSE: 2926.85 (0.24 %)</span>
         </span>
       </div>

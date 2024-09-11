@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -84,7 +85,18 @@ const Footer = () => {
               <div className="tfLinks tfBox">
                 <h4>Social Media</h4>
                 <div className="socialLinks">
-                  <a href=""></a>
+                  <a href="">
+                    <FaFacebookF />
+                  </a>
+                  <a href="">
+                    <FaXTwitter />
+                  </a>
+                  <a href="">
+                    <FaInstagram />
+                  </a>
+                  <a href="">
+                    <FaLinkedinIn />
+                  </a>
                 </div>
               </div>
             </div>
