@@ -1,4 +1,7 @@
-@import 'layout/variables';
+@import 'layout/typo';
+
+@import 'plugins/slick';
+@import 'plugins/slick-theme';
 
 @import 'layout/default';
 @import 'layout/header';
