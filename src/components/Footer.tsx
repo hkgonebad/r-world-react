@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             {/*  */}
-            <div className="col col-sm-12">
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>
                   <Link to={"/"}>Home</Link>
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
 
             {/*  */}
-            <div className="col col-sm-12">
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>Media Hub</h4>
                 <ul>
@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
 
             {/*  */}
-            <div className="col col-sm-12">
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>Other</h4>
                 <ul>
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
 
             {/*  */}
-            <div className="col col-sm-12">
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>Contact Us</h4>
                 <ul>
@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
 
             {/*  */}
-            <div className="col col-sm-12">
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>Refers</h4>
                 <h5>(Global Corporate Security)</h5>
