@@ -46,8 +46,8 @@ const extraDropdowns = [
   {
     icon: FiUser,
     items: [
-      { name: "Action", path: "/user/action-1" },
-      { name: "Another action", path: "/user/action-2" },
+      { name: "Change Password", path: "/profile/change-password" },
+      { name: "Logout", path: "/login" },
     ],
   },
 ];
