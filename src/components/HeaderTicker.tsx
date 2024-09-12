@@ -3,7 +3,7 @@ import { FiArrowDown, FiArrowUp, FiPlayCircle } from "react-icons/fi";
 
 const HeaderTicker = () => {
   return (
-    <div className="hTicker">
+    <div className="hTicker container">
       {/* Play Button */}
       <div className="htPlay">
         <a href="">
@@ -17,14 +17,9 @@ const HeaderTicker = () => {
       {/* Marquee: https://www.react-fast-marquee.com/documentation */}
       <div className="htMarquee">
         <Marquee pauseOnHover={true}>
-          <span>
-            I can be a React component, multiple React components, or just some text.I can be a React component,
-            multiple React components, or just some text.
-          </span>
-          <span>
-            I can be a React component, multiple React components, or just some text.I can be a React component,
-            multiple React components, or just some text.
-          </span>
+          <span>47th Reliance Industries Live Annual General Meeting</span>
+          <span>Nurturing Aspirations - Transforming Lives</span>
+          <span>47th Reliance Industries Live Annual General Meeting</span>
         </Marquee>
       </div>
 
