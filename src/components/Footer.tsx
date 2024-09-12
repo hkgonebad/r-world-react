@@ -11,40 +11,47 @@ const Footer = () => {
             {/*  */}
             <div className="col ">
               <div className="tfLinks tfBox">
-                <h4>
+                {/* <h4>
                   <Link to={"/"}>Home</Link>
-                </h4>
+                </h4> */}
+                <Link to={"/"}>
+                  <h4>Home</h4>
+                </Link>
               </div>
 
               <div className="tfLinks tfBox">
-                <h4>
-                  <a>My Feed</a>
-                </h4>
+                {/* <h4>
+                  <Link to={"/feed"}>My Feed</Link>
+                </h4> */}
+                <Link to={"/feed"}>
+                  <h4>My Feed</h4>
+                </Link>
               </div>
 
               <div className="tfLinks tfBox">
-                <h4>
-                  <a>News Room</a>
-                </h4>
+                {/* <a>News Room</a> */}
+                <Link to={"/news"}>
+                  <h4>News Room</h4>
+                </Link>
               </div>
             </div>
 
             {/*  */}
             <div className="col ">
               <div className="tfLinks tfBox">
-                <h4>Media Hub</h4>
+                <h4>Info Pages</h4>
                 <ul>
                   <li>
-                    <a>Image Gallery</a>
+                    <Link to={"glossary"}>Glossary of Terms</Link>
                   </li>
                   <li>
-                    <a>Video Gallery</a>
+                    <Link to={"newsletters"}>Newsletters</Link>
                   </li>
                   <li>
-                    <a>Info Pages</a>
+                    <Link to={"communication"}>Communication Guidelines</Link>
                   </li>
                   <li>
-                    <a>Events</a>
+                    <Link to={"events"}>Events</Link>
                   </li>
                 </ul>
               </div>
@@ -62,7 +69,7 @@ const Footer = () => {
                     <Link to={"terms"}>Terms & Conditions</Link>
                   </li>
                   <li>
-                    <a>R-World News & Governance</a>
+                    <a>R-World News Governance</a>
                   </li>
                   <li>
                     <a>10 Tenets</a>
@@ -81,7 +88,10 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+            </div>
 
+            {/*  */}
+            <div className="col ">
               <div className="tfLinks tfBox">
                 <h4>Social Media</h4>
                 <div className="socialLinks">
@@ -98,19 +108,6 @@ const Footer = () => {
                     <FaLinkedinIn />
                   </a>
                 </div>
-              </div>
-            </div>
-
-            {/*  */}
-            <div className="col ">
-              <div className="tfLinks tfBox">
-                <h4>Refers</h4>
-                <h5>(Global Corporate Security)</h5>
-                <small>We have you and your family covered 24 x 7</small>
-                <a href="tel:18008899009">1800-8899-009</a>
-
-                <small>from any Jio Sim card</small>
-                <a href="tel:50009">50009</a>
               </div>
             </div>
           </div>
