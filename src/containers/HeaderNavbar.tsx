@@ -71,7 +71,15 @@ const HeaderNavbar = () => {
               <Nav className="justify-content-start flex-grow-1 me-auto mainNav">
                 {navLinks.map((link, index) =>
                   link.dropdown ? (
-                    <NavDropdown title={link.name} key={index}>
+                    <NavDropdown
+                      title={
+                        <span className="d-flex align-items-center">
+                          {link.name}
+                          <FiChevronDown className="ms-1 dToggle" />
+                        </span>
+                      }
+                      key={index}
+                    >
                       {link.dropdown.map((item, idx) => (
                         <NavDropdown.Item
                           as={Link}

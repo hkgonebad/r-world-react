@@ -37,6 +37,10 @@ header {}
             }
         }
 
+        &:after {
+            display: none;
+        }
+
         &:hover,
         &:focus,
         &:active,
