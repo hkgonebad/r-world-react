@@ -1,9 +1,9 @@
-import HomeAdBanner from "../components/HomeAdBanner";
-import HomeAdBanner2 from "../components/HomeAdBanner2";
-import HomeGalleryTab from "../components/HomeGalleryTab";
-import HomeLatestNews from "../components/HomeLatestNews";
-import HomeSlider from "../components/HomeSlider";
-import Sidebar from "../components/Sidebar";
+import HomeAdBanner from "../components/home/HomeAdBanner";
+import HomeAdBanner2 from "../components/home/HomeAdBanner2";
+import HomeGalleryTab from "../components/home/HomeGalleryTab";
+import HomeLatestNews from "../components/home/HomeLatestNews";
+import HomeSlider from "../components/home/HomeSlider";
+import Sidebar from "../containers/Sidebar";
 
 const Home = () => {
   return (

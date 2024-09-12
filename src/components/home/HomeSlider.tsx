@@ -16,7 +16,7 @@ const HomeSlider = () => {
         <Slider {...settings} className="homeSlider">
           <div className="hsItem">
             <div className="hsBox">
-              <img src="/public/img/slider/1.jpg" alt="" />
+              <img src="/img/slider/1.jpg" alt="" />
               <div className="captions">
                 <span className="tag badge">Jio</span>
                 <h3>Get your Jio SIM in no time</h3>
@@ -33,7 +33,7 @@ const HomeSlider = () => {
 
           <div className="hsItem">
             <div className="hsBox">
-              <img src="/public/img/slider/1.jpg" alt="" />
+              <img src="/img/slider/1.jpg" alt="" />
               <div className="captions">
                 <span className="tag badge">Jio</span>
                 <h3>Get your Jio SIM in no time</h3>

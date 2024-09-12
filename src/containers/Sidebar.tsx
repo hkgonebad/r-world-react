@@ -1,8 +1,8 @@
 import { FiArrowRight } from "react-icons/fi";
-import EventBox from "./EventBox";
-import EditorPicks from "./EditorPicks";
-import ThumbBox from "./ThumbBox";
-import QuickPoll from "./QuickPoll";
+import EventBox from "../components/common/EventBox";
+import EditorPicks from "../components/sidebar/EditorPicks";
+import ThumbBox from "../components/common/ThumbBox";
+import QuickPoll from "../components/sidebar/QuickPoll";
 import { Tab, Tabs } from "react-bootstrap";
 
 const Sidebar = () => {
@@ -16,7 +16,7 @@ const Sidebar = () => {
           title="Experience Culture at The Centre"
           date="Sep 7, 2024"
           time="45 Mins"
-          img="/public/img/videos/trending.png"
+          img="/img/videos/trending.png"
           video
           className="wBoxAlt2"
         />
@@ -29,7 +29,7 @@ const Sidebar = () => {
           tag="Jio"
           title="Jio announces 8th anniversary offer"
           date="Sep 7, 2024"
-          img="/public/img/spotlight/1.png"
+          img="/img/spotlight/1.png"
           isLocked
         />
       </div>

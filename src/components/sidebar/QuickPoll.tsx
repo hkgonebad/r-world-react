@@ -12,9 +12,9 @@ const QuickPoll = () => {
           <span>5,213 Votes</span>
         </div>
         <div className="pbOptions">
-          <Form.Check type="radio" label="Agree" />
-          <Form.Check type="radio" label="Disagree" />
-          <Form.Check type="radio" label="Don't Know" />
+          <Form.Check type="radio" label="Agree" name="poll" id="agree" />
+          <Form.Check type="radio" label="Disagree" name="poll" id="disagree" />
+          <Form.Check type="radio" label="Don't Know" name="poll" id="dontknow" />
         </div>
         <button className="btn btn-outline-primary">Submit</button>
       </div>
