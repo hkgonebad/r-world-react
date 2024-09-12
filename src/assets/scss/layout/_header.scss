@@ -1,0 +1,136 @@
+header {}
+
+.mainHeader {}
+
+.navbar-brand {
+    margin-right: 50px;
+}
+
+.mainNav {
+    gap: 10px;
+
+    .nav-link {
+        position: relative;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            width: 20%;
+            height: 4px;
+            margin: 0 auto;
+            border-radius: 4px;
+
+            background: $secondary;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s;
+
+            @include media-breakpoint-down(lg) {
+                width: 10%;
+                height: 2px;
+                right: initial;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: $secondary;
+
+            &:before {
+                width: 90%;
+                visibility: visible;
+                opacity: 1;
+
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                    right: initial;
+                }
+            }
+        }
+
+    }
+}
+
+.dropdown-menu {
+    border: 1px solid #E5E5E5;
+    border-top: 2px solid #BFA161;
+
+    box-shadow: 0px 10px 20px 0px #00000026;
+    border-radius: 12px;
+
+    .dropdown-item {
+        font-size: 13px;
+        font-weight: 500;
+        color: #666666;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: $secondary;
+        }
+    }
+}
+
+.hSearch {
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+        margin: 15px 0;
+    }
+
+    .form-control {
+        border: 1px solid #E5E5E5;
+        border-radius: 100px;
+        padding: 0.25rem 0.875rem;
+        font-size: 12px;
+        font-weight: 500;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0.5rem 0.85rem;
+        }
+
+    }
+
+    .hsIcon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+}
+
+.hExtras {
+
+    .btn {
+        background: transparent;
+        padding: 5px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+
+        &:after {
+            display: none;
+        }
+
+        .dToggle {
+            margin-left: 2px;
+        }
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

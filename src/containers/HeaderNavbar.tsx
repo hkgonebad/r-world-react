@@ -1,13 +1,13 @@
 import { Navbar, Container, Offcanvas, Nav, NavDropdown, Form, Dropdown } from "react-bootstrap";
-import { FiFilePlus, FiHeadphones, FiUser } from "react-icons/fi";
+import { FiChevronDown, FiFilePlus, FiHeadphones, FiMenu, FiSearch, FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import logo from "/img/logo.svg";
 
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "My Feed", path: "/my-feed" },
-  { name: "News Room", path: "/news-room" },
   {
-    name: "Media Hub",
+    name: "News Room",
     dropdown: [
       { name: "Glossary of Terms", path: "/media-hub/glossary" },
       { name: "Newsletters", path: "/media-hub/newsletters" },
@@ -55,21 +55,30 @@ const extraDropdowns = [
 const HeaderNavbar = () => {
   return (
     <div className="mainHeader">
-      <Navbar expand="lg" className="bg-body-tertiary mb-3">
+      <Navbar expand="lg" className="">
         <Container>
-          <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
-          <Navbar.Toggle aria-controls="mainNav" />
+          <Navbar.Brand as={Link} to={"/"}>
+            <img src={logo} alt="R-World Logo" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="mainNav">
+            <FiMenu />
+          </Navbar.Toggle>
           <Navbar.Offcanvas id="mainNav" placement="end">
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+              <Offcanvas.Title>R-World</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-start flex-grow-1 pe-3 me-auto">
+              <Nav className="justify-content-start flex-grow-1 me-auto mainNav">
                 {navLinks.map((link, index) =>
                   link.dropdown ? (
                     <NavDropdown title={link.name} key={index}>
                       {link.dropdown.map((item, idx) => (
-                        <NavDropdown.Item as={Link} to={item.path} key={idx}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={item.path}
+                          key={idx}
+                          active={window.location.pathname === item.path}
+                        >
                           {item.name}
                         </NavDropdown.Item>
                       ))}
@@ -83,16 +92,25 @@ const HeaderNavbar = () => {
               </Nav>
 
               {/* Search */}
-              <Form className="d-flex">
-                <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" id="search" />
+              <Form className="d-flex hSearch">
+                <Form.Control
+                  type="search"
+                  placeholder="Search here..."
+                  size="sm"
+                  className="me-2"
+                  aria-label="Search"
+                  id="search"
+                />
+                <FiSearch className="hsIcon" />
               </Form>
 
               {/* Extras */}
-              <div className="extras d-flex gap-2">
+              <div className="hExtras d-flex gap-2">
                 {extraDropdowns.map((dropdown, index) => (
-                  <Dropdown align="end" key={index}>
+                  <Dropdown align={{ lg: "end" }} key={index}>
                     <Dropdown.Toggle>
                       <dropdown.icon />
+                      <FiChevronDown className="dToggle" />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                       {dropdown.items.map((item, idx) => (
