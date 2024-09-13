@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 
 import "./index.scss";
-import { router } from "./routes.tsx";
+import { router } from "./routes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

@@ -8,7 +8,7 @@ const QuickPoll = () => {
       <div className="pollBox">
         <div className="pbQuestion">
           <h4>Reliance Industries sees positive trading surge Today?</h4>
-          <ProgressBar now={72} variant="success" />
+          <ProgressBar now={72} />
           <span>5,213 Votes</span>
         </div>
         <div className="pbOptions">

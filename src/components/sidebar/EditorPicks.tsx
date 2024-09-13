@@ -14,12 +14,12 @@ const EditorPicks = () => {
       title: `Why Tira is the next big thing in India's beauty retail with its Tech-Savy approach to beauty`,
       date: "Sept 03, 2024",
     },
-    {
-      img: "/img/editor-picks/3.png",
-      tag: "Reliance Industries",
-      title: `Viacom18 delivers a historic Olympics presentation with record-breaking viewership numbers`,
-      date: "Sept 03, 2024",
-    },
+    // {
+    //   img: "/img/editor-picks/3.png",
+    //   tag: "Reliance Industries",
+    //   title: `Viacom18 delivers a historic Olympics presentation with record-breaking viewership numbers`,
+    //   date: "Sept 03, 2024",
+    // },
   ];
 
   return (
