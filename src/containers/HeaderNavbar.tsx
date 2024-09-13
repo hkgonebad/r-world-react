@@ -1,7 +1,8 @@
 import { Navbar, Container, Offcanvas, Nav, NavDropdown, Form, Dropdown } from "react-bootstrap";
-import { FiChevronDown, FiFilePlus, FiHeadphones, FiMenu, FiSearch, FiUser } from "react-icons/fi";
+import { FiCalendar, FiChevronDown, FiFilePlus, FiHeadphones, FiMenu, FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import logo from "/img/logo.svg";
+import userPic from "/img/user.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -43,13 +44,13 @@ const extraDropdowns = [
       { name: "Another action", path: "/files/action-2" },
     ],
   },
-  {
-    icon: FiUser,
-    items: [
-      { name: "Change Password", path: "/profile/change-password" },
-      { name: "Logout", path: "/login" },
-    ],
-  },
+  // {
+  //   icon: FiUser,
+  //   items: [
+  //     { name: "Change Password", path: "/profile/change-password" },
+  //     { name: "Logout", path: "/login" },
+  //   ],
+  // },
 ];
 
 const HeaderNavbar = () => {
@@ -114,6 +115,10 @@ const HeaderNavbar = () => {
 
               {/* Extras */}
               <div className="hExtras d-flex gap-2">
+                <a href="#!" className="btn">
+                  <FiCalendar />
+                </a>
+
                 {extraDropdowns.map((dropdown, index) => (
                   <Dropdown align={{ lg: "end" }} key={index}>
                     <Dropdown.Toggle>
@@ -129,6 +134,20 @@ const HeaderNavbar = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 ))}
+
+                <Dropdown align={{ lg: "end" }}>
+                  <Dropdown.Toggle>
+                    <img src={userPic} alt="" />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item as={Link} to={"/"}>
+                      Change Password
+                    </Dropdown.Item>
+                    <Dropdown.Item as={Link} to={"/"}>
+                      Logout
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
