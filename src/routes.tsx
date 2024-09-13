@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout.tsx";
-import BlankLayout from "./layouts/BlankLayout.tsx";
+import MainLayout from "./layouts/MainLayout";
+import BlankLayout from "./layouts/BlankLayout";
 
 import Login from "./auth/Login";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-import Home from "./pages/Home.tsx";
+import Home from "./pages/Home";
 
 export const router = createBrowserRouter([
   {
