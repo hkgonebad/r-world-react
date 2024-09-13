@@ -180,3 +180,30 @@
         --bs-btn-padding-x: 1rem;
     }
 }
+
+.wHighlight {
+    background: linear-gradient(133.93deg, #254399 3.32%, #6C2274 70.09%);
+    color: #fff;
+
+    padding: 25px;
+    border-radius: $border-radius;
+
+    h5 {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 0 0 10px;
+        text-transform: uppercase;
+    }
+
+    small {
+        font-size: 16px;
+        font-weight: 300;
+        display: block;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 900;
+        color: #fff;
+    }
+}

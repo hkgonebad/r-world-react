@@ -67,6 +67,8 @@ const Sidebar = () => {
           <small>We have you and your family covered 24 x 7</small>
           <a href="tel:18008899009">1800-8899-009</a>
 
+          <div className="mb-3"></div>
+
           <small>from any Jio Sim card</small>
           <a href="tel:50009">50009</a>
         </div>
