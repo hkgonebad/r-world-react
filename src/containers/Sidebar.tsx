@@ -1,9 +1,9 @@
-import { FiArrowRight } from "react-icons/fi";
-import EventBox from "../components/common/EventBox";
 import EditorPicks from "../components/sidebar/EditorPicks";
 import ThumbBox from "../components/common/ThumbBox";
 import QuickPoll from "../components/sidebar/QuickPoll";
-import { Tab, Tabs } from "react-bootstrap";
+// import { Tab, Tabs } from "react-bootstrap";
+import Refers from "../components/sidebar/Refers";
+import Promo from "../components/sidebar/Promo";
 
 const Sidebar = () => {
   return (
@@ -35,7 +35,7 @@ const Sidebar = () => {
       </div>
 
       {/*  Calendar / Events */}
-      <div className="sWidget">
+      {/* <div className="sWidget">
         <Tabs defaultActiveKey="events">
           <Tab eventKey="events" title="Events">
             <div className="events">
@@ -51,7 +51,10 @@ const Sidebar = () => {
             Tab content for Profile
           </Tab>
         </Tabs>
-      </div>
+      </div> */}
+
+      {/* Promo */}
+      <Promo />
 
       {/* Editor Picks */}
       <EditorPicks />
@@ -60,19 +63,7 @@ const Sidebar = () => {
       <QuickPoll />
 
       {/* Refers */}
-      <div className="sWidget">
-        <div className="wBox wHighlight">
-          <h4 className="wTitle">Refers</h4>
-          <h5>(Global Corporate Security)</h5>
-          <small>We have you and your family covered 24 x 7</small>
-          <a href="tel:18008899009">1800-8899-009</a>
-
-          <div className="mb-3"></div>
-
-          <small>from any Jio Sim card</small>
-          <a href="tel:50009">50009</a>
-        </div>
-      </div>
+      <Refers />
     </>
   );
 };
