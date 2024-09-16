@@ -1,4 +1,4 @@
-import { FiPlayCircle } from "react-icons/fi";
+import { FiImage, FiPlayCircle } from "react-icons/fi";
 import clsx from "clsx"; // Optional: if you want to simplify conditional classNames
 import { Link } from "react-router-dom";
 import colors from "../../config/colors";
@@ -9,6 +9,7 @@ type ThumbBoxProps = {
   desc?: string;
   date: string;
   isLocked?: boolean;
+  photo?: boolean;
   video?: boolean;
   videoLink?: string;
   time?: string;
@@ -17,6 +18,7 @@ type ThumbBoxProps = {
   altBox?: boolean;
   img?: string;
   className?: string;
+  isLarge?: boolean;
 };
 
 const ThumbBox = ({
@@ -25,6 +27,7 @@ const ThumbBox = ({
   desc,
   date,
   isLocked = false,
+  photo = false,
   video = false,
   videoLink = "#!",
   time,
@@ -33,6 +36,7 @@ const ThumbBox = ({
   readMore = false,
   readMoreLink = "#!",
   className = "",
+  isLarge = false,
 }: ThumbBoxProps) => {
   const tagColors: { [key: string]: string } = {
     JioThings: colors.jioThings,
@@ -44,8 +48,9 @@ const ThumbBox = ({
   };
 
   return (
-    <div className={clsx("wBox", className, { isLocked, wBoxAlt: altBox })}>
+    <div className={clsx("wBox", className, { isLocked, wBoxAlt: altBox, wBoxLarge: isLarge })}>
       <div className="wThumb">
+        {photo && <FiImage className="wIconGallery" />}
         {video && (
           <a href={videoLink} className=" wIcon">
             <FiPlayCircle />

@@ -53,3 +53,14 @@ img {
         --bs-btn-padding-x: 1.5rem;
     }
 }
+
+.modal {
+
+    .modal-header {
+        border: 0;
+    }
+
+    .modal-title {
+        margin-bottom: 0;
+    }
+}
