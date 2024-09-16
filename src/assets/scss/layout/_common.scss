@@ -134,6 +134,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transform: scale(1);
+            transition: all 0.3s ease;
         }
     }
 
@@ -199,6 +201,14 @@
             height: 228px;
         }
     }
+
+    &:hover {
+        .wThumb {
+            img {
+                transform: scale(1.07);
+            }
+        }
+    }
 }
 
 .pollBox {
@@ -210,7 +220,7 @@
     .pbQuestion {
         background: #ECF1FF;
         border-radius: $border-radius;
-        padding: 30px 40px;
+        padding: 25px 35px;
 
         h4 {
             font-size: 16px;
