@@ -5,12 +5,42 @@ import HomeLatestNews from "../components/home/HomeLatestNews";
 import HomeSlider from "../components/home/HomeSlider";
 import Sidebar from "../containers/Sidebar";
 
+import TagSelectionModal from "../components/home/TagSelectionModal";
+import { useState } from "react";
+
 const Home = () => {
+  const [showModal, setShowModal] = useState(true);
+  const availableTags = [
+    "Reliance Industries",
+    "ADAS, AV, & Safety",
+    "EV Battery",
+    "Supply Chain",
+    "Manufacturing",
+    "Sustainable & EV Supply Chain",
+    "EV Strategy",
+    "Charging & Infrastructure",
+    "Regulatory & Policy",
+    "Fleet & Trucking",
+    "Consumer Trends",
+    "Workforce",
+    "Financial Results",
+    "Lifestyle",
+    "Partnerships and M&A",
+    "Products",
+    "Mobility & Transport",
+    "China Strategy",
+    "Aerospace & Defense",
+    "Evironment",
+    "Finance",
+  ];
+
+  const handleClose = () => setShowModal(false);
+
   return (
     <>
       <HomeSlider />
 
-      <section className="homeBlock ">
+      <section className="homeBlock mb-3">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -29,6 +59,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <TagSelectionModal show={showModal} handleClose={handleClose} availableTags={availableTags} />
     </>
   );
 };
