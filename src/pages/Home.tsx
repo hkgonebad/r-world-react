@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <HomeSlider />
 
-      <section className="block">
+      <section className="homeBlock ">
         <div className="container">
           <div className="row">
             <div className="col-md-8">

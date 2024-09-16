@@ -24,6 +24,52 @@
         font-size: 24px;
     }
 
+
+}
+
+.wTitleBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .wTitle {
+        margin-bottom: 0;
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+
+        position: relative;
+        color: $primary;
+
+        .icon {
+            transform: translateX(0px);
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            .icon {
+                transform: translateX(2px);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.block {
+    padding: 20px;
+    border-radius: $border-radius;
+    background: #fff;
 }
 
 .badge {
@@ -100,7 +146,15 @@
             color: #666666;
         }
 
-        .btn {}
+        .btn-light {
+            color: #005CFF;
+            background: #fff;
+            border: 1px solid #EEEEEE;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
     }
 
     &.wBoxAlt {
