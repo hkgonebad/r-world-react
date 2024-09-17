@@ -37,6 +37,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
 
             &.selected,
             &:hover {
@@ -49,9 +50,9 @@
             }
 
             .icon {
-                font-size: 12px;
+                font-size: 15px;
                 color: #000;
-                padding: 2px;
+                padding: 3px;
                 cursor: pointer;
             }
         }
