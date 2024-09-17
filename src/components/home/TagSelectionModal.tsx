@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import { FiSearch, FiX } from "react-icons/fi";
 
@@ -12,6 +12,14 @@ const TagSelectionModal = ({ show, handleClose, availableTags }: TagSelectionMod
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
+  // On mount, load the selected tags from localStorage
+  useEffect(() => {
+    const storedTags = localStorage.getItem("selectedTags");
+    if (storedTags) {
+      setSelectedTags(JSON.parse(storedTags));
+    }
+  }, []);
+
   // Add or remove tags from the selected list
   const toggleTagSelection = (tag: string) => {
     setSelectedTags(
@@ -24,6 +32,12 @@ const TagSelectionModal = ({ show, handleClose, availableTags }: TagSelectionMod
 
   // Filter tags based on the search term
   const filteredTags = availableTags.filter((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  // Save selected tags to localStorage when the user clicks "Save"
+  const handleSave = () => {
+    localStorage.setItem("selectedTags", JSON.stringify(selectedTags));
+    handleClose();
+  };
 
   return (
     <Modal show={show} onHide={handleClose} size="lg">
@@ -56,6 +70,8 @@ const TagSelectionModal = ({ show, handleClose, availableTags }: TagSelectionMod
                   className="form-control"
                   placeholder="Search Tags"
                   value={searchTerm}
+                  id="searchTag"
+                  name="searchTag"
                   onChange={(e) => setSearchTerm(e.target.value)} // Update search term on input
                 />
                 <FiSearch className="icon" />
@@ -71,7 +87,7 @@ const TagSelectionModal = ({ show, handleClose, availableTags }: TagSelectionMod
                   ))}
                 </div>
 
-                <button className="btn btn-primary" disabled={selectedTags.length < 5}>
+                <button className="btn btn-primary" disabled={selectedTags.length < 5} onClick={handleSave}>
                   Save
                 </button>
               </div>
