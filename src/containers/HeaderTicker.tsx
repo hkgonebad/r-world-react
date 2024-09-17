@@ -21,7 +21,7 @@ const HeaderTicker = () => {
           <Marquee pauseOnHover={true}>
             <span>47th Reliance Industries Live Annual General Meeting</span>
             <span>Nurturing Aspirations - Transforming Lives</span>
-            <span>47th Reliance Industries Live Annual General Meeting</span>
+            <span>Reliance Industries - The Diamond Box Experience</span>
           </Marquee>
         </div>
 

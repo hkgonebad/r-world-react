@@ -168,6 +168,11 @@
             font-size: 12px;
             font-weight: 700;
             margin-top: 10px;
+
+            &:hover {
+                background: #005CFF;
+                color: #fff;
+            }
         }
     }
 
