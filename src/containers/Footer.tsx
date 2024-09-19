@@ -84,7 +84,7 @@ const Footer = () => {
                 <h4>Contact Us</h4>
                 <ul>
                   <li>
-                    <a>support@rworld.com</a>
+                    <a href="mailto:rworld@zmail.ril.com">rworld@zmail.ril.com</a>
                   </li>
                 </ul>
               </div>

@@ -23,8 +23,6 @@
     @include media-breakpoint-down(md) {
         font-size: 24px;
     }
-
-
 }
 
 .wTitleBtns {
@@ -67,7 +65,7 @@
 }
 
 .block {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     border-radius: $border-radius;
     background: #fff;
 }
@@ -283,7 +281,7 @@
     }
 
     small {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 300;
         display: block;
     }

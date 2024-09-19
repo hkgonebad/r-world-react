@@ -50,13 +50,18 @@ const HomeSlider = () => {
                 </div>
                 <div className="col-md-8">
                   <div className="hsImg">
-                    {slide.isVideo && <FiPlayCircle className="hsIcon" />}
+                    {slide.isVideo && <FiPlayCircle className="hsIcon" strokeWidth={1} />}
                     <img src={slide.imgSrc} alt={slide.title} />
                   </div>
                 </div>
               </div>
             </div>
           ))}
+          <div className="hsItem">
+            <div className="hsBox row">
+              <img src="/img/slider/test.png" />
+            </div>
+          </div>
         </Slider>
       </div>
     </section>

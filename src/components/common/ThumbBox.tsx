@@ -53,7 +53,7 @@ const ThumbBox = ({
         {photo && <FiImage className="wIconGallery" />}
         {video && (
           <a href={videoLink} className=" wIcon">
-            <FiPlayCircle />
+            <FiPlayCircle strokeWidth={1} />
           </a>
         )}
         <img src={img} alt={title} loading="lazy" />

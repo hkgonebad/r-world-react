@@ -83,7 +83,7 @@ const Login = () => {
                   <FiArrowLeft /> Back to Login
                 </a>
                 <h2 className="wTitle">Enter OTP</h2>
-                <p>A 6-digit code has been sent to your registered mobile number</p>
+                <p>A 6-digit code has been sent to your registered email ID and mobile number</p>
 
                 <div className="form-group">
                   <label htmlFor="otp">OTP</label>

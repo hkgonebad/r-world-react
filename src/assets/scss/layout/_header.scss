@@ -2,7 +2,9 @@ header {
     margin-bottom: 20px;
 }
 
-.mainHeader {}
+.mainHeader {
+    margin-bottom: 15px;
+}
 
 .navbar-brand {
     margin-right: 50px;
@@ -16,6 +18,7 @@ header {
         font-size: 14px;
         font-weight: 500;
         color: #333;
+        transition: all 0.3s;
 
         &:before {
             content: '';
@@ -61,7 +64,6 @@ header {
                 }
             }
         }
-
     }
 }
 
@@ -76,6 +78,7 @@ header {
         font-size: 13px;
         font-weight: 500;
         color: #666666;
+        transition: all 0.3s;
 
         &:not(:last-child) {
             border-bottom: 1px solid #E5E5E5;
@@ -88,7 +91,26 @@ header {
             color: $secondary;
         }
     }
+
+    .themeColors {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+
+        span {
+            border: 1px solid #E5E5E5;
+            display: inline-block;
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin: 5px 0;
+        }
+    }
 }
+
+
 
 .hSearch {
     position: relative;
@@ -103,9 +125,10 @@ header {
         padding: 0.25rem 0.875rem;
         font-size: 12px;
         font-weight: 500;
+        align-self: center;
 
         @include media-breakpoint-down(lg) {
-            padding: 0.5rem 0.85rem;
+            padding: 0.3rem 0.85rem;
         }
 
     }
@@ -120,6 +143,10 @@ header {
 
 .hExtras {
 
+    .dropdown {
+        align-self: center;
+    }
+
     .btn {
         background: transparent;
         padding: 5px;
@@ -127,6 +154,12 @@ header {
         font-size: 15px;
         font-weight: 500;
         color: #333;
+        transition: all 0.3s;
+        align-self: center;
+
+        img {
+            align-self: center;
+        }
 
         &:after {
             display: none;
@@ -143,9 +176,47 @@ header {
     }
 }
 
+// Dark
+.dark {
+    .navbar-toggler {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    .mainNav {
+        .nav-link {
+            color: #fff;
+
+            &:before {
+                background: #fff;
+            }
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                color: #fff;
+
+                &:before {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .hExtras {
+        .btn {
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
 // Ticker
 .hTicker {
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -207,6 +278,9 @@ header {
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
+
+                // add blinking effect
+                animation: blinker 1s linear infinite;
 
             }
         }
@@ -307,6 +381,13 @@ header {
                 }
             }
         }
+    }
+}
+
+// blinker
+@keyframes blinker {
+    50% {
+        opacity: 0;
     }
 }
 

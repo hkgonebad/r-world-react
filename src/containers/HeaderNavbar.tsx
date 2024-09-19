@@ -2,6 +2,7 @@ import { Navbar, Container, Offcanvas, Nav, NavDropdown, Form, Dropdown } from "
 import { FiCalendar, FiChevronDown, FiFilePlus, FiHeadphones, FiMenu, FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import logo from "/img/logo.svg";
+import logoWhite from "/img/logo-white.svg";
 import userPic from "/img/user.png";
 import { useState } from "react";
 import TagSelectionModal from "../components/home/TagSelectionModal";
@@ -55,7 +56,18 @@ const navLinks = [
 //   },
 // ];
 
-const HeaderNavbar = () => {
+const themeColors = [
+  { color: "#ffffff", name: "White" },
+  { color: "#C1A261", name: "Gold" },
+  { color: "#27367F", name: "Dark Blue" },
+  { color: "#EA232E", name: "Red" },
+  { color: "#14A850", name: "Bright Green" },
+  { color: "#277E3D", name: "Dark Green" },
+  { color: "#2A327A", name: "Navy" },
+  { color: "#CD2D7F", name: "Pink" },
+];
+
+const HeaderNavbar = ({ theme, onThemeChange }: { theme: string; onThemeChange: (color: string) => void }) => {
   const [showModal, setShowModal] = useState(false);
   const availableTags = [
     "Reliance Industries",
@@ -86,10 +98,14 @@ const HeaderNavbar = () => {
   return (
     <>
       <div className="mainHeader">
-        <Navbar expand="lg" className="">
+        <Navbar
+          expand="lg"
+          className={theme !== "#ffffff" && theme !== "white" ? "dark" : ""}
+          style={{ backgroundColor: theme }}
+        >
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
-              <img src={logo} alt="R-World Logo" />
+              <img src={theme !== "#ffffff" ? logoWhite : logo} alt="R-World Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="mainNav">
               <FiMenu />
@@ -183,10 +199,24 @@ const HeaderNavbar = () => {
                       <img src={userPic} alt="" />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item as={Link} to={"/"}>
-                        Change Password
+                      <Dropdown.Item as={Link} to={"/user/profile"}>
+                        Profile
                       </Dropdown.Item>
-                      <Dropdown.Item as={Link} to={"/"}>
+                      <Dropdown.Item>
+                        <span>Theme</span>
+                        <div className="themeColors">
+                          {themeColors.map((themeOption) => (
+                            <span
+                              key={themeOption.color}
+                              className="theme-circle"
+                              style={{ backgroundColor: themeOption.color }}
+                              onClick={() => onThemeChange(themeOption.color)}
+                            ></span>
+                          ))}
+                        </div>
+                      </Dropdown.Item>
+
+                      <Dropdown.Item as={Link} to={"/login"}>
                         Logout
                       </Dropdown.Item>
                     </Dropdown.Menu>

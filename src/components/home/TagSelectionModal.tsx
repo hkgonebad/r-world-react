@@ -48,7 +48,7 @@ const TagSelectionModal = ({ show, handleClose, availableTags }: TagSelectionMod
         <div className="selectPreference">
           <div className="row">
             <div className="col-md-6">
-              <h5>Select at least 5 preferences to personalize your news feeds.</h5>
+              <h5>Select at least 5 preferences to personalise your My Feed page.</h5>
 
               <div className="spList">
                 {filteredTags.map((tag) => (

@@ -3,7 +3,7 @@
     margin-bottom: 30px;
 
     @include media-breakpoint-down(md) {
-        gap: 10px;
+        // gap: 10px;
     }
 
     .nav-link {
@@ -58,7 +58,7 @@
     background: #ECF1FF;
 
     .wBox {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         .wInfo {
             h3 {
