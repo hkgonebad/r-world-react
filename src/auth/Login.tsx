@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { OTPInput, SlotProps } from "input-otp";
-import logo from "/img/logo-light.svg";
+import logo from "/img/logo-white.svg";
 import { FiArrowLeft } from "react-icons/fi";
 import { Link } from "react-router-dom";
 

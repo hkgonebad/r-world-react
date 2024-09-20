@@ -2,7 +2,7 @@ import adbanner from "/img/extras/1.png";
 
 const HomeAdBanner2 = () => {
   return (
-    <section className="adBanner my-3">
+    <section className="adBanner my-4">
       <a href="#!">
         <img src={adbanner} alt="" className="w-full" />
       </a>

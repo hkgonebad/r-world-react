@@ -4,10 +4,19 @@ header {
 
 .mainHeader {
     margin-bottom: 15px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .navbar-brand {
     margin-right: 50px;
+
+    @include media-breakpoint-down(lg) {
+        margin-right: auto;
+    }
+}
+
+.navbar-toggler {
+    border: none;
 }
 
 .mainNav {
@@ -61,6 +70,7 @@ header {
                 @include media-breakpoint-down(lg) {
                     width: 100%;
                     right: initial;
+                    display: none;
                 }
             }
         }
@@ -68,16 +78,19 @@ header {
 }
 
 .dropdown-menu {
+    overflow: hidden;
     border: 1px solid #E5E5E5;
     border-top: 2px solid #BFA161;
 
     box-shadow: 0px 10px 20px 0px #00000026;
     border-radius: 12px;
+    padding: 0;
 
     .dropdown-item {
         font-size: 13px;
         font-weight: 500;
         color: #666666;
+        padding: 8px 15px;
         transition: all 0.3s;
 
         &:not(:last-child) {
@@ -88,7 +101,8 @@ header {
         &:focus,
         &:active,
         &.active {
-            color: $secondary;
+            color: #000000;
+            background: #f3f6ff;
         }
     }
 
@@ -110,12 +124,64 @@ header {
     }
 }
 
+.offcanvas {
+    // max-width: 70%;
+    --bs-offcanvas-width: 300px;
 
+    .offcanvas-header {
+        padding: 0;
+
+        .btn-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 10px;
+        }
+    }
+
+    .offcanvas-body {
+
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .navbar-nav {
+            @include media-breakpoint-down(lg) {
+                order: 3;
+                width: 100%;
+
+                .dropdown-toggle {
+                    .dToggle {
+                        position: absolute;
+                        right: 0px;
+
+                    }
+                }
+            }
+        }
+
+        .hSearch {
+            @include media-breakpoint-down(lg) {
+                order: 2;
+            }
+        }
+
+        .hExtras {
+            @include media-breakpoint-down(lg) {
+                order: 1;
+            }
+        }
+    }
+}
 
 .hSearch {
     position: relative;
+    margin-right: 10px;
 
     @include media-breakpoint-down(lg) {
+
         margin: 15px 0;
     }
 
@@ -146,6 +212,38 @@ header {
     .dropdown {
         align-self: center;
     }
+
+    .btn {
+        background: transparent;
+        padding: 5px;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        color: #333;
+        transition: all 0.3s;
+        align-self: center;
+
+        img {
+            align-self: center;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        .dToggle {
+            margin-left: 2px;
+            font-size: 11px;
+        }
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+.userDrop {
+    margin-left: 5px;
 
     .btn {
         background: transparent;
@@ -279,8 +377,8 @@ header {
                 justify-content: center;
                 flex-shrink: 0;
 
-                // add blinking effect
-                animation: blinker 1s linear infinite;
+                // add ripple effect
+                animation: ripple 1.5s ease-out infinite;
 
             }
         }
@@ -384,12 +482,22 @@ header {
     }
 }
 
-// blinker
-@keyframes blinker {
+// Ripple effect
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+
     50% {
-        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
+
+
 
 .rfm-marquee-container {
     gap: 10px;

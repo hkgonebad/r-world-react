@@ -19,7 +19,7 @@ const HomeAdBanner = () => {
     //     </div>
     //   </div>
     // </section>
-    <section className="adBanner my-3">
+    <section className="adBanner my-4">
       <a href="#!">
         <img src={adbanner} alt="" className="w-full" />
       </a>

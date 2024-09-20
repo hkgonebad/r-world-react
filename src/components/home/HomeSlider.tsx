@@ -57,11 +57,11 @@ const HomeSlider = () => {
               </div>
             </div>
           ))}
-          <div className="hsItem">
+          {/* <div className="hsItem">
             <div className="hsBox row">
               <img src="/img/slider/test.png" />
             </div>
-          </div>
+          </div> */}
         </Slider>
       </div>
     </section>

@@ -1,5 +1,10 @@
 .sWidget {
     margin-bottom: 20px;
+    margin-top: 25px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 10px;
+    }
 }
 
 .wTitle {
@@ -201,7 +206,11 @@
 
     &.wBoxLarge {
         .wThumb {
-            height: 228px;
+
+
+            @include media-breakpoint-up(md) {
+                height: 228px;
+            }
         }
     }
 

@@ -34,6 +34,20 @@ const Footer = () => {
                   <h4>News Room</h4>
                 </Link>
               </div>
+
+              <div className="tfLinks tfBox">
+                {/* <a>News Room</a> */}
+                <Link to={"/videos"}>
+                  <h4>Videos</h4>
+                </Link>
+              </div>
+
+              <div className="tfLinks tfBox">
+                {/* <a>News Room</a> */}
+                <Link to={"/photos"}>
+                  <h4>Photos</h4>
+                </Link>
+              </div>
             </div>
 
             {/*  */}

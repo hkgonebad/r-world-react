@@ -9,7 +9,7 @@ import TagSelectionModal from "../components/home/TagSelectionModal";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "My Feed", path: "/my-feed" },
+  { name: "My Feeds", path: "/my-feed" },
   {
     name: "News Room",
     dropdown: [
@@ -112,7 +112,7 @@ const HeaderNavbar = ({ theme, onThemeChange }: { theme: string; onThemeChange: 
             </Navbar.Toggle>
             <Navbar.Offcanvas id="mainNav" placement="end">
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title>R-World</Offcanvas.Title>
+                <Offcanvas.Title></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-start flex-grow-1 me-auto mainNav">
@@ -148,14 +148,7 @@ const HeaderNavbar = ({ theme, onThemeChange }: { theme: string; onThemeChange: 
 
                 {/* Search */}
                 <Form className="d-flex hSearch">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search here..."
-                    size="sm"
-                    className="me-2"
-                    aria-label="Search"
-                    id="search"
-                  />
+                  <Form.Control type="search" placeholder="Search here..." size="sm" aria-label="Search" id="search" />
                   <FiSearch className="hsIcon" />
                 </Form>
 
@@ -193,37 +186,36 @@ const HeaderNavbar = ({ theme, onThemeChange }: { theme: string; onThemeChange: 
                     </Dropdown.Menu>
                   </Dropdown>
                 ))} */}
-
-                  <Dropdown align={{ lg: "end" }}>
-                    <Dropdown.Toggle>
-                      <img src={userPic} alt="" />
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item as={Link} to={"/user/profile"}>
-                        Profile
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <span>Theme</span>
-                        <div className="themeColors">
-                          {themeColors.map((themeOption) => (
-                            <span
-                              key={themeOption.color}
-                              className="theme-circle"
-                              style={{ backgroundColor: themeOption.color }}
-                              onClick={() => onThemeChange(themeOption.color)}
-                            ></span>
-                          ))}
-                        </div>
-                      </Dropdown.Item>
-
-                      <Dropdown.Item as={Link} to={"/login"}>
-                        Logout
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
                 </div>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
+            <Dropdown align="end" className="userDrop">
+              <Dropdown.Toggle>
+                <img src={userPic} alt="" />
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to={"/user/profile"}>
+                  Profile
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <span>Theme</span>
+                  <div className="themeColors">
+                    {themeColors.map((themeOption) => (
+                      <span
+                        key={themeOption.color}
+                        className="theme-circle"
+                        style={{ backgroundColor: themeOption.color }}
+                        onClick={() => onThemeChange(themeOption.color)}
+                      ></span>
+                    ))}
+                  </div>
+                </Dropdown.Item>
+
+                <Dropdown.Item as={Link} to={"/login"}>
+                  Logout
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Container>
         </Navbar>
       </div>

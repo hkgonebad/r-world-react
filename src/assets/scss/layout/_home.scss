@@ -11,6 +11,7 @@
             @include media-breakpoint-down(md) {
                 gap: 15px;
                 flex-direction: column;
+                margin-bottom: 25px;
             }
 
             .wThumb {
@@ -37,6 +38,10 @@
 
     .wBox {
         margin-bottom: 20px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 25px;
+        }
     }
 }
 
