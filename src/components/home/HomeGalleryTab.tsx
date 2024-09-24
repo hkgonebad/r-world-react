@@ -4,7 +4,7 @@ import ThumbBox from "../common/ThumbBox";
 
 const HomeGalleryTab = () => {
   return (
-    <section className="galleryTab block">
+    <div className="galleryTab secBlock">
       <a href="#!" className="btn btn-text viewAll">
         View All <FiArrowRight className="icon" />
       </a>
@@ -133,7 +133,7 @@ const HomeGalleryTab = () => {
           </div>
         </Tab>
       </Tabs>
-    </section>
+    </div>
   );
 };
 

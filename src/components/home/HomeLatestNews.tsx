@@ -1,16 +1,17 @@
 import { FiArrowRight } from "react-icons/fi";
 import ThumbBox from "../common/ThumbBox";
+import { Link } from "react-router-dom";
 
 const HomeLatestNews = () => {
   return (
     <>
-      <section className="latestNews block">
+      <div className="latestNews secBlock">
         <div className=" wTitleBtns">
           <h4 className="wTitle">Latest News</h4>
           <div className="btns">
-            <button className="btn btn-text">
+            <Link className="btn btn-text" to={"/news"}>
               View All <FiArrowRight className="icon" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -56,7 +57,7 @@ const HomeLatestNews = () => {
             />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
