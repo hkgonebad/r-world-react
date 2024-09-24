@@ -1,6 +1,6 @@
 import { Navbar, Container, Offcanvas, Nav, NavDropdown, Form, Dropdown } from "react-bootstrap";
 import { FiCalendar, FiChevronDown, FiFilePlus, FiHeadphones, FiMenu, FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "/img/logo.svg";
 import logoWhite from "/img/logo-white.svg";
 import userPic from "/img/user.png";
@@ -12,22 +12,17 @@ const navLinks = [
   { name: "My Feeds", path: "/my-feed" },
   {
     name: "News Room",
-    dropdown: [
-      { name: "Glossary of Terms", path: "/media-hub/glossary" },
-      { name: "Newsletters", path: "/media-hub/newsletters" },
-      { name: "Communication Guidelines", path: "/media-hub/guidelines" },
-      { name: "Events", path: "/media-hub/events" },
-    ],
+    dropdown: [{ name: "News", path: "/news" }],
   },
   { name: "Videos", path: "/videos" },
   { name: "Photos", path: "/photos" },
+  { name: "Events", path: "/info-pages/events" },
   {
     name: "Info Pages",
     dropdown: [
       { name: "Glossary of Terms", path: "/info-pages/glossary" },
       { name: "Newsletters", path: "/info-pages/newsletters" },
       { name: "Communication Guidelines", path: "/info-pages/guidelines" },
-      { name: "Events", path: "/info-pages/events" },
     ],
   },
 ];
@@ -132,16 +127,20 @@ const HeaderNavbar = ({ theme, onThemeChange }: { theme: string; onThemeChange: 
                             as={Link}
                             to={item.path}
                             key={idx}
-                            active={window.location.pathname === item.path}
+                            className={window.location.pathname === item.path ? "active" : ""}
                           >
                             {item.name}
                           </NavDropdown.Item>
                         ))}
                       </NavDropdown>
                     ) : (
-                      <Nav.Link as={Link} to={link.path} key={index}>
+                      <NavLink
+                        to={link.path}
+                        key={index}
+                        className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                      >
                         {link.name}
-                      </Nav.Link>
+                      </NavLink>
                     )
                   )}
                 </Nav>
