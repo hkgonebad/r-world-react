@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Trending Videos */}
-      <div className="sWidget">
+      <div className="sWidget mt-0">
         <h4 className="wTitle">Trending Videos</h4>
         <ThumbBox
           tag="NMACC"
